@@ -13,8 +13,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_PREFIX_PATH "C:/Qt/6.7.2/msvc2019_64/lib/cmake")
 
 # Find the Qt package
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 # Manually set the SDL2 paths
 set(SDL2_INCLUDE_DIRS "C:/SDL2/include")
@@ -24,59 +24,25 @@ set(SDL2_DLL "C:/SDL2/lib/x64/SDL2.dll")
 # Include SDL2 directories
 include_directories(${SDL2_INCLUDE_DIRS})
 
-set(TS_FILES app_en_US.ts)
-
 set(PROJECT_SOURCES
     main.cpp
-    MyWidget.h
     MyWidget.cpp
-    mainwindow.ui
-    ${TS_FILES}
+    MyWidget.h
 )
 
+# Set up the executable as a Windows GUI application
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(app
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
-    qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
     qt_finalize_executable(app)
 else()
-    if(ANDROID)
-        add_library(app SHARED
-            ${PROJECT_SOURCES}
-        )
-    else()
-        add_executable(app WIN32 ${PROJECT_SOURCES})
-    endif()
-    qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+    add_executable(app WIN32 ${PROJECT_SOURCES})  # WIN32 flag ensures GUI app
 endif()
 
-# Link against the Qt Widgets library
-target_link_libraries(app PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-
-# Link against the SDL2 library
-target_link_libraries(app PRIVATE ${SDL2_LIBRARIES})
-
-# Set properties for macOS bundle and Windows executable
-if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.app)
-endif()
-set_target_properties(app PROPERTIES
-    ${BUNDLE_ID_OPTION}
-    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-    MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
-)
-
-# Installation setup
-include(GNUInstallDirs)
-install(TARGETS app
-    BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
+# Link against the Qt Widgets and SDL2 libraries
+target_link_libraries(app PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${SDL2_LIBRARIES})
 
 # Copy SDL2.dll to the output directory (Windows only)
 if(WIN32)

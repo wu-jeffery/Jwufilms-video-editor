@@ -17,7 +17,6 @@ C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake
 C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake
 C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake
 C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake
-C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeParseArguments.cmake
 C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake
 C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake
 C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake
@@ -213,16 +212,6 @@ C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-debug.cmake
 C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake
 C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake
 C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsAdditionalTargetInfo.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsConfig.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsConfigVersion.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsConfigVersionImpl.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsDependencies.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsTargets-debug.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsTargets-relwithdebinfo.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsTargets.cmake
-C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsVersionlessTargets.cmake
 C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake
 C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake
 C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake
@@ -258,4 +247,3 @@ C:/developer/repos/video_editing_software/app/CMakeLists.txt
 C:/developer/repos/video_editing_software/app/build/CMakeFiles/3.30.2/CMakeCXXCompiler.cmake
 C:/developer/repos/video_editing_software/app/build/CMakeFiles/3.30.2/CMakeRCCompiler.cmake
 C:/developer/repos/video_editing_software/app/build/CMakeFiles/3.30.2/CMakeSystem.cmake
-C:/developer/repos/video_editing_software/app/build/CMakeFiles/cmake.verify_globs

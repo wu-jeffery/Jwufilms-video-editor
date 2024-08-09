@@ -27,8 +27,8 @@ MyWidget::MyWidget(QWidget *parent) : QWidget(parent), sdlWindow(nullptr), sdlRe
         return;
     }
 
-    // Set initial color to blue
-    SDL_SetRenderDrawColor(sdlRenderer, 0, 0, 255, 255);
+    // Set initial color to green
+    SDL_SetRenderDrawColor(sdlRenderer, 0, 255, 0, 255);  // Green color
     SDL_RenderClear(sdlRenderer);
     SDL_RenderPresent(sdlRenderer);
 }
@@ -44,8 +44,8 @@ MyWidget::~MyWidget() {
 }
 
 void MyWidget::paintEvent(QPaintEvent *event) {
-    // Clear the screen with the blue color
-    SDL_SetRenderDrawColor(sdlRenderer, 0, 0, 255, 255);
+    // Clear the screen with the green color
+    SDL_SetRenderDrawColor(sdlRenderer, 0, 255, 0, 255);  // Green color
     SDL_RenderClear(sdlRenderer);
     SDL_RenderPresent(sdlRenderer);
 
