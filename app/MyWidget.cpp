@@ -1,53 +1,142 @@
 #include "MyWidget.h"
-#include <QVBoxLayout>
+#include <QPainter>
+#include <QFileDialog>
 #include <QMessageBox>
-#include <iostream>
 
-MyWidget::MyWidget(QWidget *parent) : QWidget(parent), sdlWindow(nullptr), sdlRenderer(nullptr) {
-    // Initialize SDL
-    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
-        std::cerr << "SDL_Init Error: " << SDL_GetError() << std::endl;
-        return;
+MyWidget::MyWidget(QWidget *parent) : QWidget(parent) {
+    initializeFFmpeg();
+
+    timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, this, &MyWidget::decodeFrame);
+
+    QString fileName = QFileDialog::getOpenFileName(this, "Open Media File", "", "Media Files (*.mp4 *.avi *.mkv)");
+    if (!fileName.isEmpty()) {
+        openMediaFile(fileName);
     }
-
-    // Create an SDL window inside this Qt widget
-    sdlWindow = SDL_CreateWindowFrom((void *)winId());
-    if (!sdlWindow) {
-        std::cerr << "SDL_CreateWindowFrom Error: " << SDL_GetError() << std::endl;
-        SDL_Quit();
-        return;
-    }
-
-    // Create a renderer for the SDL window
-    sdlRenderer = SDL_CreateRenderer(sdlWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-    if (!sdlRenderer) {
-        std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
-        SDL_DestroyWindow(sdlWindow);
-        SDL_Quit();
-        return;
-    }
-
-    // Set initial color to green
-    SDL_SetRenderDrawColor(sdlRenderer, 0, 255, 0, 255);  // Green color
-    SDL_RenderClear(sdlRenderer);
-    SDL_RenderPresent(sdlRenderer);
 }
 
 MyWidget::~MyWidget() {
-    if (sdlRenderer) {
-        SDL_DestroyRenderer(sdlRenderer);
+    cleanupFFmpeg();
+}
+
+void MyWidget::initializeFFmpeg() {
+    avformat_network_init();
+    avcodec_register_all();
+}
+
+void MyWidget::cleanupFFmpeg() {
+    if (swsContext) {
+        sws_freeContext(swsContext);
     }
-    if (sdlWindow) {
-        SDL_DestroyWindow(sdlWindow);
+    if (packet) {
+        av_packet_free(&packet);
     }
-    SDL_Quit();
+    if (frame) {
+        av_frame_free(&frame);
+    }
+    if (codecContext) {
+        avcodec_free_context(&codecContext);
+    }
+    if (formatContext) {
+        avformat_close_input(&formatContext);
+    }
+}
+
+void MyWidget::openMediaFile(const QString &fileName) {
+    formatContext = avformat_alloc_context();
+
+    if (avformat_open_input(&formatContext, fileName.toStdString().c_str(), nullptr, nullptr) != 0) {
+        QMessageBox::critical(this, "Error", "Could not open media file.");
+        return;
+    }
+
+    if (avformat_find_stream_info(formatContext, nullptr) < 0) {
+        QMessageBox::critical(this, "Error", "Could not find stream information.");
+        return;
+    }
+
+    for (unsigned int i = 0; i < formatContext->nb_streams; i++) {
+        if (formatContext->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
+            videoStreamIndex = i;
+            break;
+        }
+    }
+
+    if (videoStreamIndex == -1) {
+        QMessageBox::critical(this, "Error", "No video stream found.");
+        return;
+    }
+
+    AVCodecParameters *codecParams = formatContext->streams[videoStreamIndex]->codecpar;
+    AVCodec *codec = avcodec_find_decoder(codecParams->codec_id);
+    if (!codec) {
+        QMessageBox::critical(this, "Error", "Unsupported codec.");
+        return;
+    }
+
+    codecContext = avcodec_alloc_context3(codec);
+    if (!codecContext) {
+        QMessageBox::critical(this, "Error", "Could not allocate codec context.");
+        return;
+    }
+
+    if (avcodec_parameters_to_context(codecContext, codecParams) < 0) {
+        QMessageBox::critical(this, "Error", "Could not initialize codec context.");
+        return;
+    }
+
+    if (avcodec_open2(codecContext, codec, nullptr) < 0) {
+        QMessageBox::critical(this, "Error", "Could not open codec.");
+        return;
+    }
+
+    frame = av_frame_alloc();
+    packet = av_packet_alloc();
+
+    int width = codecContext->width;
+    int height = codecContext->height;
+    swsContext = sws_getContext(width, height, codecContext->pix_fmt, width, height, AV_PIX_FMT_RGB24, SWS_BILINEAR, nullptr, nullptr, nullptr);
+
+    timer->start(30);  // Decode and display a frame every 30ms (~33fps)
+}
+
+void MyWidget::decodeFrame() {
+    if (av_read_frame(formatContext, packet) >= 0) {
+        if (packet->stream_index == videoStreamIndex) {
+            if (avcodec_send_packet(codecContext, packet) >= 0) {
+                if (avcodec_receive_frame(codecContext, frame) >= 0) {
+                    displayFrame();
+                }
+            }
+        }
+        av_packet_unref(packet);
+    } else {
+        timer->stop();  // End of file or error
+    }
+}
+
+void MyWidget::displayFrame() {
+    int width = codecContext->width;
+    int height = codecContext->height;
+
+    uint8_t *data[AV_NUM_DATA_POINTERS] = { nullptr };
+    int linesize[AV_NUM_DATA_POINTERS] = { 0 };
+    av_image_alloc(data, linesize, width, height, AV_PIX_FMT_RGB24, 1);
+
+    sws_scale(swsContext, frame->data, frame->linesize, 0, height, data, linesize);
+
+    currentFrame = QImage(data[0], width, height, QImage::Format_RGB888);
+
+    av_freep(&data[0]);
+
+    update();  // Trigger a repaint to display the new frame
 }
 
 void MyWidget::paintEvent(QPaintEvent *event) {
-    // Clear the screen with the green color
-    SDL_SetRenderDrawColor(sdlRenderer, 0, 255, 0, 255);  // Green color
-    SDL_RenderClear(sdlRenderer);
-    SDL_RenderPresent(sdlRenderer);
+    Q_UNUSED(event);
 
-    QWidget::paintEvent(event);
+    QPainter painter(this);
+    if (!currentFrame.isNull()) {
+        painter.drawImage(0, 0, currentFrame.scaled(size(), Qt::KeepAspectRatio));
+    }
 }

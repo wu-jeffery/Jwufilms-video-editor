@@ -24,6 +24,19 @@ set(SDL2_DLL "C:/SDL2/lib/x64/SDL2.dll")
 # Include SDL2 directories
 include_directories(${SDL2_INCLUDE_DIRS})
 
+# Set the FFmpeg paths
+set(FFMPEG_INCLUDE_DIRS "C:/FFmpeg_1/build_msys/include")
+set(FFMPEG_LIBRARIES 
+    "C:/FFmpeg_1/build_msys/bin/avcodec.lib"
+    "C:/FFmpeg_1/build_msys/bin/avformat.lib"
+    "C:/FFmpeg_1/build_msys/bin/avutil.lib"
+    "C:/FFmpeg_1/build_msys/bin/swscale.lib"
+    "C:/FFmpeg_1/build_msys/bin/swresample.lib"
+)
+
+# Include FFmpeg directories
+include_directories(${FFMPEG_INCLUDE_DIRS})
+
 set(PROJECT_SOURCES
     main.cpp
     MyWidget.cpp
@@ -41,14 +54,41 @@ else()
     add_executable(app WIN32 ${PROJECT_SOURCES})  # WIN32 flag ensures GUI app
 endif()
 
-# Link against the Qt Widgets and SDL2 libraries
-target_link_libraries(app PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${SDL2_LIBRARIES})
+# Link against the Qt Widgets, SDL2, and FFmpeg libraries
+target_link_libraries(app PRIVATE 
+    Qt${QT_VERSION_MAJOR}::Widgets 
+    ${SDL2_LIBRARIES} 
+    ${FFMPEG_LIBRARIES}
+)
 
 # Copy SDL2.dll to the output directory (Windows only)
 if(WIN32)
     add_custom_command(TARGET app POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "${SDL2_DLL}"
+        $<TARGET_FILE_DIR:app>
+    )
+
+    # Copy FFmpeg DLLs
+    add_custom_command(TARGET app POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "C:/FFmpeg_1/build_msys/bin/avcodec-61.dll"
+        "C:/FFmpeg_1/build_msys/bin/avformat-61.dll"
+        "C:/FFmpeg_1/build_msys/bin/avutil-59.dll"
+        "C:/FFmpeg_1/build_msys/bin/swscale-8.dll"
+        "C:/FFmpeg_1/build_msys/bin/swresample-5.dll"
+        $<TARGET_FILE_DIR:app>
+    )
+
+    # Copy msys-2.0.dll and other MSYS2 dependencies
+    add_custom_command(TARGET app POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "C:/msys64/usr/bin/msys-2.0.dll"
+        $<TARGET_FILE_DIR:app>
+    )
+    add_custom_command(TARGET app POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "C:/msys64/usr/bin/msys-gcc_s-seh-1.dll"
         $<TARGET_FILE_DIR:app>
     )
 endif()

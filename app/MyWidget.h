@@ -1,12 +1,13 @@
-#ifndef MYWIDGET_H
-#define MYWIDGET_H
+#pragma once
 
-// Define SDL_MAIN_HANDLED before including SDL.h to prevent SDL from defining its own main
-#define SDL_MAIN_HANDLED
-#include <SDL.h>
-
-// Include Qt headers after defining SDL_MAIN_HANDLED
 #include <QWidget>
+#include <QTimer>
+
+extern "C" {
+#include <libavformat/avformat.h>
+#include <libavcodec/avcodec.h>
+#include <libswscale/swscale.h>
+}
 
 class MyWidget : public QWidget {
     Q_OBJECT
@@ -15,12 +16,26 @@ public:
     explicit MyWidget(QWidget *parent = nullptr);
     ~MyWidget();
 
+    void openMediaFile(const QString &fileName);
+
 protected:
     void paintEvent(QPaintEvent *event) override;
 
-private:
-    SDL_Window *sdlWindow;
-    SDL_Renderer *sdlRenderer;
-};
+private slots:
+    void decodeFrame();
 
-#endif // MYWIDGET_H
+private:
+    AVFormatContext *formatContext = nullptr;
+    AVCodecContext *codecContext = nullptr;
+    AVFrame *frame = nullptr;
+    AVPacket *packet = nullptr;
+    SwsContext *swsContext = nullptr;
+    int videoStreamIndex = -1;
+
+    QImage currentFrame;
+    QTimer *timer = nullptr;
+
+    void initializeFFmpeg();
+    void cleanupFFmpeg();
+    void displayFrame();
+};
