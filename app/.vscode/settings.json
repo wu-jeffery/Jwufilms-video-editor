@@ -3,6 +3,7 @@
         "qmainwindow": "cpp",
         "qapplication": "cpp",
         "qmessagebox": "cpp",
-        "qvboxlayout": "cpp"
+        "qvboxlayout": "cpp",
+        "iostream": "cpp"
     }
 }

@@ -418,6 +418,7 @@
 	"MOC_INCLUDES_Debug" : 
 	[
 		"C:/SDL2/include",
+		"C:/FFmpeg_1/build_msys/include",
 		"C:/Qt/6.7.2/msvc2019_64/include/QtCore",
 		"C:/Qt/6.7.2/msvc2019_64/include",
 		"C:/Qt/6.7.2/msvc2019_64/mkspecs/win32-msvc",
@@ -427,6 +428,7 @@
 	"MOC_INCLUDES_MinSizeRel" : 
 	[
 		"C:/SDL2/include",
+		"C:/FFmpeg_1/build_msys/include",
 		"C:/Qt/6.7.2/msvc2019_64/include/QtCore",
 		"C:/Qt/6.7.2/msvc2019_64/include",
 		"C:/Qt/6.7.2/msvc2019_64/mkspecs/win32-msvc",
@@ -436,6 +438,7 @@
 	"MOC_INCLUDES_RelWithDebInfo" : 
 	[
 		"C:/SDL2/include",
+		"C:/FFmpeg_1/build_msys/include",
 		"C:/Qt/6.7.2/msvc2019_64/include/QtCore",
 		"C:/Qt/6.7.2/msvc2019_64/include",
 		"C:/Qt/6.7.2/msvc2019_64/mkspecs/win32-msvc",
@@ -445,6 +448,7 @@
 	"MOC_INCLUDES_Release" : 
 	[
 		"C:/SDL2/include",
+		"C:/FFmpeg_1/build_msys/include",
 		"C:/Qt/6.7.2/msvc2019_64/include/QtCore",
 		"C:/Qt/6.7.2/msvc2019_64/include",
 		"C:/Qt/6.7.2/msvc2019_64/mkspecs/win32-msvc",

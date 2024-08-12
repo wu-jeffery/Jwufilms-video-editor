@@ -1,4 +1,42 @@
 C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/EWIEGA46WW/moc_MyWidget.cpp: C:/developer/repos/video_editing_software/app/MyWidget.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/avcodec.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/codec.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/codec_desc.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/codec_id.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/codec_par.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/defs.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/packet.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/version.h \
+  C:/FFmpeg_1/build_msys/include/libavcodec/version_major.h \
+  C:/FFmpeg_1/build_msys/include/libavformat/avformat.h \
+  C:/FFmpeg_1/build_msys/include/libavformat/avio.h \
+  C:/FFmpeg_1/build_msys/include/libavformat/version.h \
+  C:/FFmpeg_1/build_msys/include/libavformat/version_major.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/attributes.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/avconfig.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/avutil.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/buffer.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/channel_layout.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/common.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/dict.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/error.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/frame.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/hwcontext.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/imgutils.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/intfloat.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/log.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/macros.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/mathematics.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/mem.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/pixdesc.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/pixfmt.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/rational.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/samplefmt.h \
+  C:/FFmpeg_1/build_msys/include/libavutil/version.h \
+  C:/FFmpeg_1/build_msys/include/libswscale/swscale.h \
+  C:/FFmpeg_1/build_msys/include/libswscale/version.h \
+  C:/FFmpeg_1/build_msys/include/libswscale/version_major.h \
+  C:/Qt/6.7.2/msvc2019_64/include/QtCore/QTimer \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/q20type_traits.h \
@@ -12,6 +50,7 @@ C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/EW
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qatomic.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbytearray.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbytearrayalgorithms.h \
@@ -100,6 +139,7 @@ C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/EW
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtimer.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtnoop.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtpreprocessorsupport.h \
@@ -146,54 +186,4 @@ C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/EW
   C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h \
-  C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h \
-  C:/SDL2/include/SDL.h \
-  C:/SDL2/include/SDL_assert.h \
-  C:/SDL2/include/SDL_atomic.h \
-  C:/SDL2/include/SDL_audio.h \
-  C:/SDL2/include/SDL_blendmode.h \
-  C:/SDL2/include/SDL_clipboard.h \
-  C:/SDL2/include/SDL_config.h \
-  C:/SDL2/include/SDL_cpuinfo.h \
-  C:/SDL2/include/SDL_endian.h \
-  C:/SDL2/include/SDL_error.h \
-  C:/SDL2/include/SDL_events.h \
-  C:/SDL2/include/SDL_filesystem.h \
-  C:/SDL2/include/SDL_gamecontroller.h \
-  C:/SDL2/include/SDL_gesture.h \
-  C:/SDL2/include/SDL_guid.h \
-  C:/SDL2/include/SDL_haptic.h \
-  C:/SDL2/include/SDL_hidapi.h \
-  C:/SDL2/include/SDL_hints.h \
-  C:/SDL2/include/SDL_joystick.h \
-  C:/SDL2/include/SDL_keyboard.h \
-  C:/SDL2/include/SDL_keycode.h \
-  C:/SDL2/include/SDL_loadso.h \
-  C:/SDL2/include/SDL_locale.h \
-  C:/SDL2/include/SDL_log.h \
-  C:/SDL2/include/SDL_main.h \
-  C:/SDL2/include/SDL_messagebox.h \
-  C:/SDL2/include/SDL_metal.h \
-  C:/SDL2/include/SDL_misc.h \
-  C:/SDL2/include/SDL_mouse.h \
-  C:/SDL2/include/SDL_mutex.h \
-  C:/SDL2/include/SDL_pixels.h \
-  C:/SDL2/include/SDL_platform.h \
-  C:/SDL2/include/SDL_power.h \
-  C:/SDL2/include/SDL_quit.h \
-  C:/SDL2/include/SDL_rect.h \
-  C:/SDL2/include/SDL_render.h \
-  C:/SDL2/include/SDL_rwops.h \
-  C:/SDL2/include/SDL_scancode.h \
-  C:/SDL2/include/SDL_sensor.h \
-  C:/SDL2/include/SDL_shape.h \
-  C:/SDL2/include/SDL_stdinc.h \
-  C:/SDL2/include/SDL_surface.h \
-  C:/SDL2/include/SDL_system.h \
-  C:/SDL2/include/SDL_thread.h \
-  C:/SDL2/include/SDL_timer.h \
-  C:/SDL2/include/SDL_touch.h \
-  C:/SDL2/include/SDL_version.h \
-  C:/SDL2/include/SDL_video.h \
-  C:/SDL2/include/begin_code.h \
-  C:/SDL2/include/close_code.h
+  C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h

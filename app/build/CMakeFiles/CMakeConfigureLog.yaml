@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-      Build started 8/8/2024 10:58:37 PM.
+      Build started 8/11/2024 8:51:07 PM.
       
       Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\3.30.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.31
+      Time Elapsed 00:00:00.30
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -72,8 +72,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-yk9qic"
-      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-yk9qic"
+      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-l7pa0s"
+      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-l7pa0s"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -83,40 +83,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-yk9qic'
+        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-l7pa0s'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_597bd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_86db3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 8/8/2024 10:58:37 PM.
+        Build started 8/11/2024 8:51:07 PM.
         
-        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yk9qic\\cmTC_597bd.vcxproj" on node 1 (default targets).
+        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l7pa0s\\cmTC_86db3.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_597bd.dir\\Debug\\".
+          Creating directory "cmTC_86db3.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yk9qic\\Debug\\".
-          Creating directory "cmTC_597bd.dir\\Debug\\cmTC_597bd.tlog\\".
+          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l7pa0s\\Debug\\".
+          Creating directory "cmTC_86db3.dir\\Debug\\cmTC_86db3.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_597bd.dir\\Debug\\cmTC_597bd.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_597bd.dir\\Debug\\cmTC_597bd.tlog\\unsuccessfulbuild".
+          Creating "cmTC_86db3.dir\\Debug\\cmTC_86db3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_86db3.dir\\Debug\\cmTC_86db3.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_597bd.dir\\Debug\\\\" /Fd"cmTC_597bd.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_86db3.dir\\Debug\\\\" /Fd"cmTC_86db3.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33811 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_597bd.dir\\Debug\\\\" /Fd"cmTC_597bd.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_86db3.dir\\Debug\\\\" /Fd"cmTC_86db3.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yk9qic\\Debug\\cmTC_597bd.exe" /INCREMENTAL /ILK:"cmTC_597bd.dir\\Debug\\cmTC_597bd.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-yk9qic/Debug/cmTC_597bd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-yk9qic/Debug/cmTC_597bd.lib" /MACHINE:X64  /machine:x64 cmTC_597bd.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_597bd.vcxproj -> C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yk9qic\\Debug\\cmTC_597bd.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l7pa0s\\Debug\\cmTC_86db3.exe" /INCREMENTAL /ILK:"cmTC_86db3.dir\\Debug\\cmTC_86db3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-l7pa0s/Debug/cmTC_86db3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-l7pa0s/Debug/cmTC_86db3.lib" /MACHINE:X64  /machine:x64 cmTC_86db3.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_86db3.vcxproj -> C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l7pa0s\\Debug\\cmTC_86db3.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_597bd.dir\\Debug\\cmTC_597bd.tlog\\unsuccessfulbuild".
-          Touching "cmTC_597bd.dir\\Debug\\cmTC_597bd.tlog\\cmTC_597bd.lastbuildstate".
-        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yk9qic\\cmTC_597bd.vcxproj" (default targets).
+          Deleting file "cmTC_86db3.dir\\Debug\\cmTC_86db3.tlog\\unsuccessfulbuild".
+          Touching "cmTC_86db3.dir\\Debug\\cmTC_86db3.tlog\\cmTC_86db3.lastbuildstate".
+        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l7pa0s\\cmTC_86db3.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.31
+        Time Elapsed 00:00:00.30
         
       exitCode: 0
   -
@@ -162,8 +162,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-7tdlld"
-      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-7tdlld"
+      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-4rppsq"
+      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-4rppsq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -173,40 +173,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-7tdlld'
+        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-4rppsq'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_20ca9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3a2a4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 8/8/2024 10:58:38 PM.
+        Build started 8/11/2024 8:51:08 PM.
         
-        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\cmTC_20ca9.vcxproj" on node 1 (default targets).
+        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\cmTC_3a2a4.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_20ca9.dir\\Debug\\".
+          Creating directory "cmTC_3a2a4.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\Debug\\".
-          Creating directory "cmTC_20ca9.dir\\Debug\\cmTC_20ca9.tlog\\".
+          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\Debug\\".
+          Creating directory "cmTC_3a2a4.dir\\Debug\\cmTC_3a2a4.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_20ca9.dir\\Debug\\cmTC_20ca9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_20ca9.dir\\Debug\\cmTC_20ca9.tlog\\unsuccessfulbuild".
+          Creating "cmTC_3a2a4.dir\\Debug\\cmTC_3a2a4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_3a2a4.dir\\Debug\\cmTC_3a2a4.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_20ca9.dir\\Debug\\\\" /Fd"cmTC_20ca9.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\src.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_3a2a4.dir\\Debug\\\\" /Fd"cmTC_3a2a4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\src.cxx"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33811 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_20ca9.dir\\Debug\\\\" /Fd"cmTC_20ca9.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\src.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_3a2a4.dir\\Debug\\\\" /Fd"cmTC_3a2a4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\src.cxx"
           src.cxx
-        C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\cmTC_20ca9.vcxproj]
-        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\cmTC_20ca9.vcxproj" (default targets) -- FAILED.
+        C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\cmTC_3a2a4.vcxproj]
+        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\cmTC_3a2a4.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\cmTC_20ca9.vcxproj" (default target) (1) ->
+        "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\cmTC_3a2a4.vcxproj" (default target) (1) ->
         (ClCompile target) -> 
-          C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tdlld\\cmTC_20ca9.vcxproj]
+          C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4rppsq\\cmTC_3a2a4.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.20
+        Time Elapsed 00:00:00.18
         
       exitCode: 1
   -
@@ -223,8 +223,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0i4iag"
-      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0i4iag"
+      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-jrvk0b"
+      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-jrvk0b"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -234,42 +234,42 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0i4iag'
+        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-jrvk0b'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0232f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_192f4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 8/8/2024 10:58:38 PM.
+        Build started 8/11/2024 8:51:08 PM.
         
-        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\cmTC_0232f.vcxproj" on node 1 (default targets).
+        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\cmTC_192f4.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_0232f.dir\\Debug\\".
+          Creating directory "cmTC_192f4.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\Debug\\".
-          Creating directory "cmTC_0232f.dir\\Debug\\cmTC_0232f.tlog\\".
+          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\Debug\\".
+          Creating directory "cmTC_192f4.dir\\Debug\\cmTC_192f4.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_0232f.dir\\Debug\\cmTC_0232f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_0232f.dir\\Debug\\cmTC_0232f.tlog\\unsuccessfulbuild".
+          Creating "cmTC_192f4.dir\\Debug\\cmTC_192f4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_192f4.dir\\Debug\\cmTC_192f4.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_0232f.dir\\Debug\\\\" /Fd"cmTC_0232f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\CheckFunctionExists.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_192f4.dir\\Debug\\\\" /Fd"cmTC_192f4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\CheckFunctionExists.cxx"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33811 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_0232f.dir\\Debug\\\\" /Fd"cmTC_0232f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\CheckFunctionExists.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_192f4.dir\\Debug\\\\" /Fd"cmTC_192f4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\CheckFunctionExists.cxx"
           CheckFunctionExists.cxx
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\Debug\\cmTC_0232f.exe" /INCREMENTAL /ILK:"cmTC_0232f.dir\\Debug\\cmTC_0232f.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0i4iag/Debug/cmTC_0232f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0i4iag/Debug/cmTC_0232f.lib" /MACHINE:X64  /machine:x64 cmTC_0232f.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\cmTC_0232f.vcxproj]
-        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\cmTC_0232f.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\Debug\\cmTC_192f4.exe" /INCREMENTAL /ILK:"cmTC_192f4.dir\\Debug\\cmTC_192f4.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-jrvk0b/Debug/cmTC_192f4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-jrvk0b/Debug/cmTC_192f4.lib" /MACHINE:X64  /machine:x64 cmTC_192f4.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\cmTC_192f4.vcxproj]
+        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\cmTC_192f4.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\cmTC_0232f.vcxproj" (default target) (1) ->
+        "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\cmTC_192f4.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0i4iag\\cmTC_0232f.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jrvk0b\\cmTC_192f4.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.25
+        Time Elapsed 00:00:00.24
         
       exitCode: 1
   -
@@ -286,8 +286,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-wowsfk"
-      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-wowsfk"
+      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-o8ei0v"
+      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-o8ei0v"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -297,42 +297,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-wowsfk'
+        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-o8ei0v'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1c484.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_50f0a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 8/8/2024 10:58:38 PM.
+        Build started 8/11/2024 8:51:08 PM.
         
-        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\cmTC_1c484.vcxproj" on node 1 (default targets).
+        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\cmTC_50f0a.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_1c484.dir\\Debug\\".
+          Creating directory "cmTC_50f0a.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\Debug\\".
-          Creating directory "cmTC_1c484.dir\\Debug\\cmTC_1c484.tlog\\".
+          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\Debug\\".
+          Creating directory "cmTC_50f0a.dir\\Debug\\cmTC_50f0a.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_1c484.dir\\Debug\\cmTC_1c484.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_1c484.dir\\Debug\\cmTC_1c484.tlog\\unsuccessfulbuild".
+          Creating "cmTC_50f0a.dir\\Debug\\cmTC_50f0a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_50f0a.dir\\Debug\\cmTC_50f0a.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_1c484.dir\\Debug\\\\" /Fd"cmTC_1c484.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\CheckFunctionExists.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_50f0a.dir\\Debug\\\\" /Fd"cmTC_50f0a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\CheckFunctionExists.cxx"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33811 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_1c484.dir\\Debug\\\\" /Fd"cmTC_1c484.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\CheckFunctionExists.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_50f0a.dir\\Debug\\\\" /Fd"cmTC_50f0a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\CheckFunctionExists.cxx"
           CheckFunctionExists.cxx
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\Debug\\cmTC_1c484.exe" /INCREMENTAL /ILK:"cmTC_1c484.dir\\Debug\\cmTC_1c484.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-wowsfk/Debug/cmTC_1c484.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-wowsfk/Debug/cmTC_1c484.lib" /MACHINE:X64  /machine:x64 cmTC_1c484.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\cmTC_1c484.vcxproj]
-        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\cmTC_1c484.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\Debug\\cmTC_50f0a.exe" /INCREMENTAL /ILK:"cmTC_50f0a.dir\\Debug\\cmTC_50f0a.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-o8ei0v/Debug/cmTC_50f0a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-o8ei0v/Debug/cmTC_50f0a.lib" /MACHINE:X64  /machine:x64 cmTC_50f0a.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\cmTC_50f0a.vcxproj]
+        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\cmTC_50f0a.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\cmTC_1c484.vcxproj" (default target) (1) ->
+        "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\cmTC_50f0a.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wowsfk\\cmTC_1c484.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o8ei0v\\cmTC_50f0a.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.25
+        Time Elapsed 00:00:00.23
         
       exitCode: 1
   -
@@ -354,8 +354,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0htrxk"
-      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0htrxk"
+      source: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-7crf7e"
+      binary: "C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-7crf7e"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -365,40 +365,40 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0htrxk'
+        Change Dir: 'C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-7crf7e'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5ef9e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c3c13.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 8/8/2024 10:58:39 PM.
+        Build started 8/11/2024 8:51:09 PM.
         
-        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0htrxk\\cmTC_5ef9e.vcxproj" on node 1 (default targets).
+        Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7crf7e\\cmTC_c3c13.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_5ef9e.dir\\Debug\\".
+          Creating directory "cmTC_c3c13.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0htrxk\\Debug\\".
-          Creating directory "cmTC_5ef9e.dir\\Debug\\cmTC_5ef9e.tlog\\".
+          Creating directory "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7crf7e\\Debug\\".
+          Creating directory "cmTC_c3c13.dir\\Debug\\cmTC_c3c13.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_5ef9e.dir\\Debug\\cmTC_5ef9e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_5ef9e.dir\\Debug\\cmTC_5ef9e.tlog\\unsuccessfulbuild".
+          Creating "cmTC_c3c13.dir\\Debug\\cmTC_c3c13.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c3c13.dir\\Debug\\cmTC_c3c13.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_5ef9e.dir\\Debug\\\\" /Fd"cmTC_5ef9e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0htrxk\\src.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_c3c13.dir\\Debug\\\\" /Fd"cmTC_c3c13.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7crf7e\\src.cxx"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33811 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_5ef9e.dir\\Debug\\\\" /Fd"cmTC_5ef9e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0htrxk\\src.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_c3c13.dir\\Debug\\\\" /Fd"cmTC_c3c13.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7crf7e\\src.cxx"
           src.cxx
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0htrxk\\Debug\\cmTC_5ef9e.exe" /INCREMENTAL /ILK:"cmTC_5ef9e.dir\\Debug\\cmTC_5ef9e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0htrxk/Debug/cmTC_5ef9e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-0htrxk/Debug/cmTC_5ef9e.lib" /MACHINE:X64  /machine:x64 cmTC_5ef9e.dir\\Debug\\src.obj
-          cmTC_5ef9e.vcxproj -> C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0htrxk\\Debug\\cmTC_5ef9e.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7crf7e\\Debug\\cmTC_c3c13.exe" /INCREMENTAL /ILK:"cmTC_c3c13.dir\\Debug\\cmTC_c3c13.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-7crf7e/Debug/cmTC_c3c13.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/developer/repos/video_editing_software/app/build/CMakeFiles/CMakeScratch/TryCompile-7crf7e/Debug/cmTC_c3c13.lib" /MACHINE:X64  /machine:x64 cmTC_c3c13.dir\\Debug\\src.obj
+          cmTC_c3c13.vcxproj -> C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7crf7e\\Debug\\cmTC_c3c13.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_5ef9e.dir\\Debug\\cmTC_5ef9e.tlog\\unsuccessfulbuild".
-          Touching "cmTC_5ef9e.dir\\Debug\\cmTC_5ef9e.tlog\\cmTC_5ef9e.lastbuildstate".
-        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0htrxk\\cmTC_5ef9e.vcxproj" (default targets).
+          Deleting file "cmTC_c3c13.dir\\Debug\\cmTC_c3c13.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c3c13.dir\\Debug\\cmTC_c3c13.tlog\\cmTC_c3c13.lastbuildstate".
+        Done Building Project "C:\\developer\\repos\\video_editing_software\\app\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7crf7e\\cmTC_c3c13.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.36
+        Time Elapsed 00:00:00.33
         
       exitCode: 0
 ...

@@ -1,5 +1,8 @@
 @echo off
 
+:: Set up the Visual Studio environment
+call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+
 cd C:\developer\repos\video_editing_software\app\build
 
 rmdir /S /Q CMakeFiles
