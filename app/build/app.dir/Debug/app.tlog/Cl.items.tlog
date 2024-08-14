@@ -1,3 +1,3 @@
 C:\developer\repos\video_editing_software\app\build\app_autogen\mocs_compilation_Debug.cpp;C:\developer\repos\video_editing_software\app\build\app.dir\Debug\mocs_compilation_Debug.obj
-C:\developer\repos\video_editing_software\app\main.cpp;C:\developer\repos\video_editing_software\app\build\app.dir\Debug\main.obj
-C:\developer\repos\video_editing_software\app\MyWidget.cpp;C:\developer\repos\video_editing_software\app\build\app.dir\Debug\MyWidget.obj
+C:\developer\repos\video_editing_software\app\src\main.cpp;C:\developer\repos\video_editing_software\app\build\app.dir\Debug\main.obj
+C:\developer\repos\video_editing_software\app\src\mainwindow.cpp;C:\developer\repos\video_editing_software\app\build\app.dir\Debug\mainwindow.obj

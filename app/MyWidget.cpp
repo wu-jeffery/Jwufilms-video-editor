@@ -9,7 +9,7 @@ using namespace std;
 MyWidget::MyWidget(QWidget *parent) : QWidget(parent) {
     initializeFFmpeg();
     cout << "MyWidget Created" << endl;
-    
+
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MyWidget::decodeFrame);
 
@@ -51,8 +51,9 @@ void MyWidget::cleanupFFmpeg() {
 void MyWidget::openMediaFile(const QString &fileName) {
     cout << "Open Media File" << endl;
     cout << formatContext << endl;
+    avformat_network_init();
     formatContext = avformat_alloc_context();
-    cout << formatContext << endl;
+    cout <<formatContext << endl;
     if (avformat_open_input(&formatContext, fileName.toStdString().c_str(), nullptr, nullptr) != 0) {
         QMessageBox::critical(this, "Error", "Could not open media file.");
         qDebug() << "Error: Could not open media file.";

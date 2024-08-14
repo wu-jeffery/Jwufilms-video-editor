@@ -1,0 +1,8 @@
+# ninja log v6
+4	387	7453039041791652	app_autogen/timestamp	3cd80597bf85a616
+4	387	7453039041791652	C:/developer/repos/video_editing_software/app/build/app_autogen/timestamp	3cd80597bf85a616
+4	387	7453039041791652	app_autogen/mocs_compilation.cpp	3cd80597bf85a616
+394	620	7453039042227118	CMakeFiles/app.dir/src/main.cpp.obj	aae00563bde6cc09
+4	387	7453039041791652	C:/developer/repos/video_editing_software/app/build/app_autogen/mocs_compilation.cpp	3cd80597bf85a616
+391	1676	7453039042207071	CMakeFiles/app.dir/app_autogen/mocs_compilation.cpp.obj	639b66e7e6428500
+396	1740	7453039042247109	CMakeFiles/app.dir/src/mainwindow.cpp.obj	c9691f27bd187463

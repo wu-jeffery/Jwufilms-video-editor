@@ -1,0 +1,3 @@
+C:/developer/repos/video_editing_software/app/Debug/CMakeFiles/app.dir
+C:/developer/repos/video_editing_software/app/Debug/CMakeFiles/ALL_BUILD.dir
+C:/developer/repos/video_editing_software/app/Debug/CMakeFiles/ZERO_CHECK.dir

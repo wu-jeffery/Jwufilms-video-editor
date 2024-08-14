@@ -1,42 +1,4 @@
-C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/EWIEGA46WW/moc_MyWidget.cpp: C:/developer/repos/video_editing_software/app/MyWidget.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/avcodec.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/codec.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/codec_desc.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/codec_id.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/codec_par.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/defs.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/packet.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/version.h \
-  C:/FFmpeg_1/build_msys/include/libavcodec/version_major.h \
-  C:/FFmpeg_1/build_msys/include/libavformat/avformat.h \
-  C:/FFmpeg_1/build_msys/include/libavformat/avio.h \
-  C:/FFmpeg_1/build_msys/include/libavformat/version.h \
-  C:/FFmpeg_1/build_msys/include/libavformat/version_major.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/attributes.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/avconfig.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/avutil.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/buffer.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/channel_layout.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/common.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/dict.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/error.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/frame.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/hwcontext.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/imgutils.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/intfloat.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/log.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/macros.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/mathematics.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/mem.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/pixdesc.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/pixfmt.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/rational.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/samplefmt.h \
-  C:/FFmpeg_1/build_msys/include/libavutil/version.h \
-  C:/FFmpeg_1/build_msys/include/libswscale/swscale.h \
-  C:/FFmpeg_1/build_msys/include/libswscale/version.h \
-  C:/FFmpeg_1/build_msys/include/libswscale/version_major.h \
-  C:/Qt/6.7.2/msvc2019_64/include/QtCore/QTimer \
+C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/6YEA5652QU/moc_mainwindow.cpp: C:/developer/repos/video_editing_software/app/include/mainwindow.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/q20type_traits.h \
@@ -50,7 +12,6 @@ C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/EW
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qatomic.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbasicatomic.h \
-  C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbytearray.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qbytearrayalgorithms.h \
@@ -139,7 +100,6 @@ C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/EW
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtextstream.h \
-  C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtimer.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtnoop.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtCore/qtpreprocessorsupport.h \
@@ -181,8 +141,10 @@ C:/developer/repos/video_editing_software/app/build/app_autogen/include_Debug/EW
   C:/Qt/6.7.2/msvc2019_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/QWidget \
+  C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qsizepolicy.h \
+  C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h \

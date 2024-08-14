@@ -4,6 +4,7 @@
         "qapplication": "cpp",
         "qmessagebox": "cpp",
         "qvboxlayout": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
