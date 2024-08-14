@@ -1,3 +1,13 @@
 C:/developer/repos/video_editing_software/app/build/CMakeFiles/app.dir
+C:/developer/repos/video_editing_software/app/build/CMakeFiles/INSTALL.dir
 C:/developer/repos/video_editing_software/app/build/CMakeFiles/ALL_BUILD.dir
 C:/developer/repos/video_editing_software/app/build/CMakeFiles/ZERO_CHECK.dir
+C:/developer/repos/video_editing_software/app/build/lib/glfw/CMakeFiles/uninstall.dir
+C:/developer/repos/video_editing_software/app/build/lib/glfw/CMakeFiles/INSTALL.dir
+C:/developer/repos/video_editing_software/app/build/lib/glfw/CMakeFiles/ALL_BUILD.dir
+C:/developer/repos/video_editing_software/app/build/lib/glfw/src/CMakeFiles/glfw.dir
+C:/developer/repos/video_editing_software/app/build/lib/glfw/src/CMakeFiles/update_mappings.dir
+C:/developer/repos/video_editing_software/app/build/lib/glfw/src/CMakeFiles/INSTALL.dir
+C:/developer/repos/video_editing_software/app/build/lib/glfw/docs/CMakeFiles/INSTALL.dir
+C:/developer/repos/video_editing_software/app/build/lib/FFmpeg/CMakeFiles/INSTALL.dir
+C:/developer/repos/video_editing_software/app/build/lib/FFmpeg/CMakeFiles/ALL_BUILD.dir

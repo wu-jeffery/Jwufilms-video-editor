@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.16)
 # Set the project name and language
 project(app LANGUAGES CXX)
 
+# INCLUSION OF GLFW and FFMPEG
+add_subdirectory(lib/glfw)
+add_subdirectory(lib/FFmpeg)
 
 #======================= INCLUSION OF Qt =======================#
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -49,3 +52,4 @@ target_include_directories(app PRIVATE ${SOURCE_DIR})
 
 # Set the working directory to the build output for runtime
 target_link_libraries(app Qt6::Widgets)
+target_link_libraries(app FFmpeg glfw)
