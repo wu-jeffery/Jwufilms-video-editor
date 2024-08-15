@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MinSizeRel/app.exe"
+			"path" : "RelWithDebInfo/app.exe"
 		},
 		{
-			"path" : "MinSizeRel/app.pdb"
+			"path" : "RelWithDebInfo/app.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -36,8 +36,7 @@
 			"C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
 			"C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
 			"C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
-			"C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
-			"lib/FFmpeg/CMakeLists.txt"
+			"C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake"
 		],
 		"nodes" : 
 		[
@@ -47,25 +46,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 45,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 54,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 55,
+				"line" : 76,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 19,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
@@ -91,7 +90,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 18,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -217,30 +216,33 @@
 				"parent" : 31
 			},
 			{
-				"file" : 13
-			},
-			{
 				"command" : 1,
-				"file" : 13,
-				"line" : 10,
-				"parent" : 33
-			},
-			{
-				"command" : 7,
 				"file" : 0,
-				"line" : 27,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 28,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 29,
+				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 49,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 50,
 				"parent" : 0
 			}
 		]
@@ -251,7 +253,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -std:c++17 -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD"
 				},
 				{
 					"backtrace" : 2,
@@ -319,7 +321,11 @@
 				},
 				{
 					"backtrace" : 0,
-					"path" : "C:/developer/repos/video_editing_software/app/build/app_autogen/include_MinSizeRel"
+					"path" : "C:/developer/repos/video_editing_software/app/build/app_autogen/include_RelWithDebInfo"
+				},
+				{
+					"backtrace" : 34,
+					"path" : "C:/ffmpeg_prebuild/include"
 				},
 				{
 					"backtrace" : 35,
@@ -361,11 +367,6 @@
 					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "C:/Qt/6.7.2/msvc2019_64/include/QtGui"
-				},
-				{
-					"backtrace" : 3,
-					"isSystem" : true,
-					"path" : "C:/FFMPEG_PREBUILT/include"
 				}
 			],
 			"language" : "CXX",
@@ -388,11 +389,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 3,
 			"id" : "glfw::@17f284a5fc0809a54549"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "app::@6890427a1f51a3e7e1df",
@@ -401,11 +402,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:windows",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:windows",
 				"role" : "flags"
 			},
 			{
@@ -415,7 +416,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "lib\\glfw\\src\\MinSizeRel\\glfw3.lib",
+				"fragment" : "lib\\glfw\\src\\RelWithDebInfo\\glfw3.lib",
 				"role" : "libraries"
 			},
 			{
@@ -469,38 +470,23 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 34,
-				"fragment" : "C:\\FFMPEG_PREBUILT\\lib\\avcodec.lib",
+				"backtrace" : 33,
+				"fragment" : "C:\\ffmpeg_prebuild\\lib\\avcodec.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 34,
-				"fragment" : "C:\\FFMPEG_PREBUILT\\lib\\avformat.lib",
+				"backtrace" : 33,
+				"fragment" : "C:\\ffmpeg_prebuild\\lib\\avformat.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 34,
-				"fragment" : "C:\\FFMPEG_PREBUILT\\lib\\avfilter.lib",
+				"backtrace" : 33,
+				"fragment" : "C:\\ffmpeg_prebuild\\lib\\avutil.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 34,
-				"fragment" : "C:\\FFMPEG_PREBUILT\\lib\\avdevice.lib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 34,
-				"fragment" : "C:\\FFMPEG_PREBUILT\\lib\\avutil.lib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 34,
-				"fragment" : "C:\\FFMPEG_PREBUILT\\lib\\swresample.lib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 34,
-				"fragment" : "C:\\FFMPEG_PREBUILT\\lib\\swscale.lib",
+				"backtrace" : 33,
+				"fragment" : "C:\\ffmpeg_prebuild\\lib\\swscale.lib",
 				"role" : "libraries"
 			},
 			{
@@ -558,7 +544,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/app_autogen/mocs_compilation_MinSizeRel.cpp",
+			"path" : "build/app_autogen/mocs_compilation_RelWithDebInfo.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -586,13 +572,13 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/app_autogen/include_MinSizeRel/forms/ui_mainwindow.h",
+			"path" : "build/app_autogen/include_RelWithDebInfo/forms/ui_mainwindow.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/app_autogen/autouic_MinSizeRel.stamp",
+			"path" : "build/app_autogen/autouic_RelWithDebInfo.stamp",
 			"sourceGroupIndex" : 1
 		},
 		{

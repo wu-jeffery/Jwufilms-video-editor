@@ -1,18 +1,33 @@
-cmake_minimum_required(VERSION 3.14)
-project(FFmpeg)
+# Specify the minimum version for CMake
+cmake_minimum_required(VERSION 3.16)
 
-# Set the path to the directory where the FFmpeg .lib files are located
-set(FFMPEG_INSTALL_DIR "C:/FFMPEG_PREBUILT")
+# Define the project name
+project(ffmpeg_integration)
 
-# Include directories and link libraries for FFmpeg
-add_library(FFmpeg INTERFACE IMPORTED GLOBAL)
-target_include_directories(FFmpeg INTERFACE ${FFMPEG_INSTALL_DIR}/include)
-target_link_libraries(FFmpeg INTERFACE
-    ${FFMPEG_INSTALL_DIR}/lib/avcodec.lib
-    ${FFMPEG_INSTALL_DIR}/lib/avformat.lib
-    ${FFMPEG_INSTALL_DIR}/lib/avfilter.lib
-    ${FFMPEG_INSTALL_DIR}/lib/avdevice.lib
-    ${FFMPEG_INSTALL_DIR}/lib/avutil.lib
-    ${FFMPEG_INSTALL_DIR}/lib/swresample.lib
-    ${FFMPEG_INSTALL_DIR}/lib/swscale.lib
+# Set the library output path (optional, depends on your structure)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+
+# Add the FFmpeg include directory
+include_directories("C:/ffmpeg_prebuild/include")
+
+# Find the FFmpeg libraries
+find_library(AVCODEC_LIBRARY avcodec PATHS "C:/ffmpeg_prebuild/lib")
+find_library(AVFORMAT_LIBRARY avformat PATHS "C:/ffmpeg_prebuild/lib")
+find_library(AVUTIL_LIBRARY avutil PATHS "C:/ffmpeg_prebuild/lib")
+find_library(SWSCALE_LIBRARY swscale PATHS "C:/ffmpeg_prebuild/lib")
+
+# Create an INTERFACE library for FFmpeg
+add_library(ffmpeg INTERFACE)
+
+# Set the properties for the INTERFACE library
+target_include_directories(ffmpeg INTERFACE "C:/ffmpeg_prebuild/include")
+target_link_libraries(ffmpeg INTERFACE
+    "${AVCODEC_LIBRARY}"
+    "${AVFORMAT_LIBRARY}"
+    "${AVUTIL_LIBRARY}"
+    "${SWSCALE_LIBRARY}"
 )
+
+# The INTERFACE library can now be linked with the final target
+# In the main CMakeLists.txt or where the final executable is defined, use:
+# target_link_libraries(your_executable_target_name PRIVATE ffmpeg)

@@ -9,5 +9,3 @@ C:/developer/repos/video_editing_software/app/build/lib/glfw/src/CMakeFiles/glfw
 C:/developer/repos/video_editing_software/app/build/lib/glfw/src/CMakeFiles/update_mappings.dir
 C:/developer/repos/video_editing_software/app/build/lib/glfw/src/CMakeFiles/INSTALL.dir
 C:/developer/repos/video_editing_software/app/build/lib/glfw/docs/CMakeFiles/INSTALL.dir
-C:/developer/repos/video_editing_software/app/build/lib/FFmpeg/CMakeFiles/INSTALL.dir
-C:/developer/repos/video_editing_software/app/build/lib/FFmpeg/CMakeFiles/ALL_BUILD.dir

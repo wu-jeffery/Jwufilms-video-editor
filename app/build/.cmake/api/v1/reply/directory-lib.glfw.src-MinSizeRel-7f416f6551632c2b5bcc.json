@@ -33,7 +33,7 @@
 				"lib/glfw/src/MinSizeRel/glfw3.lib"
 			],
 			"targetId" : "glfw::@17f284a5fc0809a54549",
-			"targetIndex" : 5,
+			"targetIndex" : 4,
 			"type" : "target"
 		}
 	],

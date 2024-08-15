@@ -319,6 +319,7 @@
 	[
 		"C:/developer/repos/video_editing_software/app/build",
 		"C:/developer/repos/video_editing_software/app",
+		"C:/ffmpeg_prebuild/include",
 		"C:/developer/repos/video_editing_software/app/forms",
 		"C:/developer/repos/video_editing_software/app/include",
 		"C:/developer/repos/video_editing_software/app/src",
@@ -327,13 +328,13 @@
 		"C:/Qt/6.7.2/msvc2019_64/include",
 		"C:/Qt/6.7.2/msvc2019_64/include/QtCore",
 		"C:/Qt/6.7.2/msvc2019_64/mkspecs/win32-msvc",
-		"C:/Qt/6.7.2/msvc2019_64/include/QtGui",
-		"C:/FFMPEG_PREBUILT/include"
+		"C:/Qt/6.7.2/msvc2019_64/include/QtGui"
 	],
 	"MOC_INCLUDES_MinSizeRel" : 
 	[
 		"C:/developer/repos/video_editing_software/app/build",
 		"C:/developer/repos/video_editing_software/app",
+		"C:/ffmpeg_prebuild/include",
 		"C:/developer/repos/video_editing_software/app/forms",
 		"C:/developer/repos/video_editing_software/app/include",
 		"C:/developer/repos/video_editing_software/app/src",
@@ -342,13 +343,13 @@
 		"C:/Qt/6.7.2/msvc2019_64/include",
 		"C:/Qt/6.7.2/msvc2019_64/include/QtCore",
 		"C:/Qt/6.7.2/msvc2019_64/mkspecs/win32-msvc",
-		"C:/Qt/6.7.2/msvc2019_64/include/QtGui",
-		"C:/FFMPEG_PREBUILT/include"
+		"C:/Qt/6.7.2/msvc2019_64/include/QtGui"
 	],
 	"MOC_INCLUDES_RelWithDebInfo" : 
 	[
 		"C:/developer/repos/video_editing_software/app/build",
 		"C:/developer/repos/video_editing_software/app",
+		"C:/ffmpeg_prebuild/include",
 		"C:/developer/repos/video_editing_software/app/forms",
 		"C:/developer/repos/video_editing_software/app/include",
 		"C:/developer/repos/video_editing_software/app/src",
@@ -357,13 +358,13 @@
 		"C:/Qt/6.7.2/msvc2019_64/include",
 		"C:/Qt/6.7.2/msvc2019_64/include/QtCore",
 		"C:/Qt/6.7.2/msvc2019_64/mkspecs/win32-msvc",
-		"C:/Qt/6.7.2/msvc2019_64/include/QtGui",
-		"C:/FFMPEG_PREBUILT/include"
+		"C:/Qt/6.7.2/msvc2019_64/include/QtGui"
 	],
 	"MOC_INCLUDES_Release" : 
 	[
 		"C:/developer/repos/video_editing_software/app/build",
 		"C:/developer/repos/video_editing_software/app",
+		"C:/ffmpeg_prebuild/include",
 		"C:/developer/repos/video_editing_software/app/forms",
 		"C:/developer/repos/video_editing_software/app/include",
 		"C:/developer/repos/video_editing_software/app/src",
@@ -372,8 +373,7 @@
 		"C:/Qt/6.7.2/msvc2019_64/include",
 		"C:/Qt/6.7.2/msvc2019_64/include/QtCore",
 		"C:/Qt/6.7.2/msvc2019_64/mkspecs/win32-msvc",
-		"C:/Qt/6.7.2/msvc2019_64/include/QtGui",
-		"C:/FFMPEG_PREBUILT/include"
+		"C:/Qt/6.7.2/msvc2019_64/include/QtGui"
 	],
 	"MOC_MACRO_NAMES" : 
 	[

@@ -3,11 +3,32 @@ cmake_minimum_required(VERSION 3.16)
 # Set the project name and language
 project(app LANGUAGES CXX)
 
-# INCLUSION OF GLFW and FFMPEG
+#=================== INCLUSION OF GLFW ====================#
 add_subdirectory(lib/glfw)
-add_subdirectory(lib/FFmpeg)
 
-#======================= INCLUSION OF Qt =======================#
+#=================== INCLUSION OF FFmpeg ====================#
+# Add the FFmpeg include directory
+include_directories("C:/ffmpeg_prebuild/include")
+
+# Find the FFmpeg libraries
+find_library(AVCODEC_LIBRARY avcodec PATHS "C:/ffmpeg_prebuild/lib")
+find_library(AVFORMAT_LIBRARY avformat PATHS "C:/ffmpeg_prebuild/lib")
+find_library(AVUTIL_LIBRARY avutil PATHS "C:/ffmpeg_prebuild/lib")
+find_library(SWSCALE_LIBRARY swscale PATHS "C:/ffmpeg_prebuild/lib")
+
+# Create an INTERFACE library for FFmpeg
+add_library(ffmpeg INTERFACE)
+
+# Set the properties for the INTERFACE library
+target_include_directories(ffmpeg INTERFACE "C:/ffmpeg_prebuild/include")
+target_link_libraries(ffmpeg INTERFACE
+    "${AVCODEC_LIBRARY}"
+    "${AVFORMAT_LIBRARY}"
+    "${AVUTIL_LIBRARY}"
+    "${SWSCALE_LIBRARY}"
+)
+
+#=================== INCLUSION OF Qt ====================#
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
@@ -44,12 +65,13 @@ set(CMAKE_AUTOUIC_SEARCH_PATHS ${FORMS_DIR})
 # Add the executable
 add_executable(app WIN32 ${SOURCES})
 
-#===================== LINKING LIBRARIES =======================#
+#===================== LINKING LIBRARIES ====================#
 # Link against the required Qt libraries
 target_include_directories(app PRIVATE ${FORMS_DIR})
 target_include_directories(app PRIVATE ${INCLUDE_DIR})
 target_include_directories(app PRIVATE ${SOURCE_DIR})
 
-# Set the working directory to the build output for runtime
-target_link_libraries(app Qt6::Widgets)
-target_link_libraries(app FFmpeg glfw)
+# Link against Qt, GLFW, and FFmpeg libraries
+target_link_libraries(app PRIVATE Qt6::Widgets)
+target_link_libraries(app PRIVATE glfw)
+target_link_libraries(app PRIVATE ffmpeg)

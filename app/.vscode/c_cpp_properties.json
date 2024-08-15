@@ -8,7 +8,8 @@
                 "C:/Qt/6.7.2/msvc2019_64/include/QtCore",
                 "C:/Qt/6.7.2/msvc2019_64/include/QtGui",
                 "C:/Qt/6.7.2/msvc2019_64/include/QtWidgets",
-                "C:/SDL2/include"
+                "C:/SDL2/include",
+                "C:/ffmpeg_prebuild/include"
             ],
             "defines": [
                 "_DEBUG",        // Add this if you are in a debug build
@@ -24,7 +25,8 @@
                 "path": [
                     "${workspaceFolder}",
                     "C:/Qt/6.7.2/msvc2019_64/include",
-                    "C:/SDL2/include"
+                    "C:/SDL2/include",
+                    "C:/ffmpeg_prebuild/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
