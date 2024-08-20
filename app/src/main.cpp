@@ -1,23 +1,24 @@
-#include <QApplication>
-#include <QDebug>
-#include <mainwindow.h>
+
 #include <GLFW/glfw3.h>
-extern "C" {
-#include <libavcodec/avcodec.h>
-#include <libavformat/avformat.h>
-#include <libavutil/imgutils.h>
-#include <libavutil/avutil.h>
-#include <libswscale/swscale.h>
-#include <inttypes.h>
-}
+#include<stdio.h>
 
 #include <iostream>
 
 int main(int argc, char* argv[]) {
-
-    AVFormatContext* av_format_ctx = avformat_alloc_context();
-    if(!av_format_ctx){
-        return 0;
+    GLFWwindow* window;
+    if(!glfwInit()){
+        printf("Couldn't init GLFW\n");
+        return 1;
     }
 
+    window = glfwCreateWindow(640, 480, "HELLO WORLD", NULL, NULL);
+    if(!window){
+        printf("couldn't open window/n");
+        return 1;
+    }
+    glfwMakeContextCurrent(window);
+    while(!glfwWindowShouldClose(window)){
+        glfwWaitEvents();
+    }
+    return 0;
 }
