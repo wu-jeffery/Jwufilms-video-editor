@@ -3079,7 +3079,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "4"
+			"value" : "5"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -8472,6 +8472,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "swresample"
+		},
+		{
+			"name" : "SWRESAMPLE_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/ffmpeg_prebuild/lib/swresample.lib"
 		},
 		{
 			"name" : "SWRESAMPLE_LIBRARY_DIRS",

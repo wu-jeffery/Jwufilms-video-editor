@@ -8,7 +8,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						4
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
@@ -21,8 +22,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -33,7 +34,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib.glfw-Debug-6f68e60cd6a01a3ed26e.json",
+					"jsonFile" : "directory-lib.glfw-Debug-bcf3a872598ebcc764e0.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.4"
@@ -44,13 +45,13 @@
 					"targetIndexes" : 
 					[
 						1,
-						5
+						6
 					]
 				},
 				{
 					"build" : "lib/glfw/src",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib.glfw.src-Debug-adf08ca489340b39f19d.json",
+					"jsonFile" : "directory-lib.glfw.src-Debug-c5d8569cadc9839e2afc.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.4"
@@ -60,8 +61,8 @@
 					"source" : "lib/glfw/src",
 					"targetIndexes" : 
 					[
-						4,
-						6
+						5,
+						7
 					]
 				},
 				{
@@ -74,6 +75,21 @@
 					"parentIndex" : 1,
 					"projectIndex" : 1,
 					"source" : "lib/glfw/docs"
+				},
+				{
+					"build" : "lib/FFmpeg",
+					"jsonFile" : "directory-lib.FFmpeg-Debug-66b11de25b62eeaae8fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "lib/FFmpeg",
+					"targetIndexes" : 
+					[
+						2
+					]
 				}
 			],
 			"name" : "Debug",
@@ -82,7 +98,8 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -92,8 +109,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -108,9 +125,21 @@
 					"targetIndexes" : 
 					[
 						1,
-						4,
 						5,
-						6
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ffmpeg_integration",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
 					]
 				}
 			],
@@ -131,6 +160,13 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@60cf84807ff9abc5fc1f",
+					"jsonFile" : "target-ALL_BUILD-Debug-ac6a0521f46cbee9e9d9.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-ZERO_CHECK-Debug-d05bdc71259e87f60b9e.json",
@@ -140,7 +176,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "app::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-app-Debug-2bb6c116a8beed3a96e7.json",
+					"jsonFile" : "target-app-Debug-e17c075d947950cb4f3f.json",
 					"name" : "app",
 					"projectIndex" : 0
 				},
@@ -174,7 +210,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						4
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
@@ -187,8 +224,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -199,7 +236,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib.glfw-Release-6f68e60cd6a01a3ed26e.json",
+					"jsonFile" : "directory-lib.glfw-Release-bcf3a872598ebcc764e0.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.4"
@@ -210,13 +247,13 @@
 					"targetIndexes" : 
 					[
 						1,
-						5
+						6
 					]
 				},
 				{
 					"build" : "lib/glfw/src",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib.glfw.src-Release-60817c7c302f2cdec31e.json",
+					"jsonFile" : "directory-lib.glfw.src-Release-3c968d9679a8840d8493.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.4"
@@ -226,8 +263,8 @@
 					"source" : "lib/glfw/src",
 					"targetIndexes" : 
 					[
-						4,
-						6
+						5,
+						7
 					]
 				},
 				{
@@ -240,6 +277,21 @@
 					"parentIndex" : 1,
 					"projectIndex" : 1,
 					"source" : "lib/glfw/docs"
+				},
+				{
+					"build" : "lib/FFmpeg",
+					"jsonFile" : "directory-lib.FFmpeg-Release-66b11de25b62eeaae8fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "lib/FFmpeg",
+					"targetIndexes" : 
+					[
+						2
+					]
 				}
 			],
 			"name" : "Release",
@@ -248,7 +300,8 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -258,8 +311,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -274,9 +327,21 @@
 					"targetIndexes" : 
 					[
 						1,
-						4,
 						5,
-						6
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ffmpeg_integration",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
 					]
 				}
 			],
@@ -297,6 +362,13 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@60cf84807ff9abc5fc1f",
+					"jsonFile" : "target-ALL_BUILD-Release-ac6a0521f46cbee9e9d9.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-ZERO_CHECK-Release-d05bdc71259e87f60b9e.json",
@@ -306,7 +378,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "app::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-app-Release-0d73746950a79dcd1a0a.json",
+					"jsonFile" : "target-app-Release-f82e9ab5803babcb6cce.json",
 					"name" : "app",
 					"projectIndex" : 0
 				},
@@ -340,7 +412,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						4
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
@@ -353,8 +426,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -365,7 +438,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib.glfw-MinSizeRel-6f68e60cd6a01a3ed26e.json",
+					"jsonFile" : "directory-lib.glfw-MinSizeRel-bcf3a872598ebcc764e0.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.4"
@@ -376,13 +449,13 @@
 					"targetIndexes" : 
 					[
 						1,
-						5
+						6
 					]
 				},
 				{
 					"build" : "lib/glfw/src",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib.glfw.src-MinSizeRel-7f416f6551632c2b5bcc.json",
+					"jsonFile" : "directory-lib.glfw.src-MinSizeRel-d9b08185fa5424c9dae4.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.4"
@@ -392,8 +465,8 @@
 					"source" : "lib/glfw/src",
 					"targetIndexes" : 
 					[
-						4,
-						6
+						5,
+						7
 					]
 				},
 				{
@@ -406,6 +479,21 @@
 					"parentIndex" : 1,
 					"projectIndex" : 1,
 					"source" : "lib/glfw/docs"
+				},
+				{
+					"build" : "lib/FFmpeg",
+					"jsonFile" : "directory-lib.FFmpeg-MinSizeRel-66b11de25b62eeaae8fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "lib/FFmpeg",
+					"targetIndexes" : 
+					[
+						2
+					]
 				}
 			],
 			"name" : "MinSizeRel",
@@ -414,7 +502,8 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -424,8 +513,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -440,9 +529,21 @@
 					"targetIndexes" : 
 					[
 						1,
-						4,
 						5,
-						6
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ffmpeg_integration",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
 					]
 				}
 			],
@@ -463,6 +564,13 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@60cf84807ff9abc5fc1f",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-ac6a0521f46cbee9e9d9.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-d05bdc71259e87f60b9e.json",
@@ -472,7 +580,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "app::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-app-MinSizeRel-67004ba89a40d75f67f4.json",
+					"jsonFile" : "target-app-MinSizeRel-dc21208feca04e9599a4.json",
 					"name" : "app",
 					"projectIndex" : 0
 				},
@@ -506,7 +614,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						4
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
@@ -519,8 +628,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -531,7 +640,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib.glfw-RelWithDebInfo-6f68e60cd6a01a3ed26e.json",
+					"jsonFile" : "directory-lib.glfw-RelWithDebInfo-bcf3a872598ebcc764e0.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.4"
@@ -542,13 +651,13 @@
 					"targetIndexes" : 
 					[
 						1,
-						5
+						6
 					]
 				},
 				{
 					"build" : "lib/glfw/src",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib.glfw.src-RelWithDebInfo-e27a65afc6782ef79694.json",
+					"jsonFile" : "directory-lib.glfw.src-RelWithDebInfo-433eaea619ff72abcc5e.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.4"
@@ -558,8 +667,8 @@
 					"source" : "lib/glfw/src",
 					"targetIndexes" : 
 					[
-						4,
-						6
+						5,
+						7
 					]
 				},
 				{
@@ -572,6 +681,21 @@
 					"parentIndex" : 1,
 					"projectIndex" : 1,
 					"source" : "lib/glfw/docs"
+				},
+				{
+					"build" : "lib/FFmpeg",
+					"jsonFile" : "directory-lib.FFmpeg-RelWithDebInfo-66b11de25b62eeaae8fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "lib/FFmpeg",
+					"targetIndexes" : 
+					[
+						2
+					]
 				}
 			],
 			"name" : "RelWithDebInfo",
@@ -580,7 +704,8 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -590,8 +715,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -606,9 +731,21 @@
 					"targetIndexes" : 
 					[
 						1,
-						4,
 						5,
-						6
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ffmpeg_integration",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
 					]
 				}
 			],
@@ -629,6 +766,13 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@60cf84807ff9abc5fc1f",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-ac6a0521f46cbee9e9d9.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-d05bdc71259e87f60b9e.json",
@@ -638,7 +782,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "app::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-app-RelWithDebInfo-0ca17e3b70c2d1a9e606.json",
+					"jsonFile" : "target-app-RelWithDebInfo-a52452d4988601c9c52d.json",
 					"name" : "app",
 					"projectIndex" : 0
 				},

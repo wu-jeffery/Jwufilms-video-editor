@@ -3,6 +3,7 @@ project(app LANGUAGES CXX)
 set(CAMEK_CXX_STANDARD 14)
 
 add_subdirectory(lib/glfw)
+add_subdirectory(lib/FFmpeg)
 
 #add_definitions(-DGL_SILENCE_DEPRECATION)
 
@@ -28,4 +29,10 @@ else()
 endif()
 
 add_executable(app src/main.cpp)
-target_link_libraries(app glfw ${EXTRA_LIBS})
+target_link_libraries(app glfw 
+                    ${AVCODEC_LIBRARY}
+                    ${AVFORMAT_LIBRARY}
+                    ${AVUTIL_LIBRARY}
+                    ${SWSCALE_LIBRARY}
+                    ${SWRESAMPLE_LIBRARY}
+                    ${EXTRA_LIBS})

@@ -4,17 +4,22 @@ cmake_minimum_required(VERSION 3.16)
 # Define the project name
 project(ffmpeg_integration)
 
+# Set the C++ standard
+set(CMAKE_CXX_STANDARD 14)
+
 # Set the library output path (optional, depends on your structure)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 # Add the FFmpeg include directory
 include_directories("C:/ffmpeg_prebuild/include")
 
-# Find the FFmpeg libraries
-find_library(AVCODEC_LIBRARY avcodec PATHS "C:/ffmpeg_prebuild/lib")
-find_library(AVFORMAT_LIBRARY avformat PATHS "C:/ffmpeg_prebuild/lib")
-find_library(AVUTIL_LIBRARY avutil PATHS "C:/ffmpeg_prebuild/lib")
-find_library(SWSCALE_LIBRARY swscale PATHS "C:/ffmpeg_prebuild/lib")
+# Manually specify the full paths to the FFmpeg libraries
+set(AVCODEC_LIBRARY "C:/ffmpeg_prebuild/lib/avcodec.lib")
+set(AVFORMAT_LIBRARY "C:/ffmpeg_prebuild/lib/avformat.lib")
+set(AVUTIL_LIBRARY "C:/ffmpeg_prebuild/lib/avutil.lib")
+set(SWSCALE_LIBRARY "C:/ffmpeg_prebuild/lib/swscale.lib")
+# Add any other FFmpeg libraries you need similarly
+set(SWRESAMPLE_LIBRARY "C:/ffmpeg_prebuild/lib/swresample.lib")
 
 # Create an INTERFACE library for FFmpeg
 add_library(ffmpeg INTERFACE)
@@ -26,6 +31,7 @@ target_link_libraries(ffmpeg INTERFACE
     "${AVFORMAT_LIBRARY}"
     "${AVUTIL_LIBRARY}"
     "${SWSCALE_LIBRARY}"
+    "${SWRESAMPLE_LIBRARY}"
 )
 
 # The INTERFACE library can now be linked with the final target
