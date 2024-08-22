@@ -1,7 +1,6 @@
 #include <GLFW/glfw3.h>
 #include<stdio.h>
-
-bool load_frame(const char* filename, int* width, int*height, unsigned char**data);
+#include "video_reader.hpp"
 
 int main(int argc, char* argv[]) {
     printf("Program starting \n");
@@ -17,15 +16,15 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    int frame_width, frame_height;
-    unsigned char* frame_data;
-    if(!load_frame("C:/Users/Jeffery Wu/FILM STUFF/Detroit Video/C0866.mp4", &frame_width, &frame_height, &frame_data)){
-        printf("Couldn't load video frame \n");
+    VideoReaderState vr_state;
+    if(!video_reader_open(&vr_state, "C:/Users/Jeffery Wu/Downloads/Black _ Blue_1.mp4")){
+        printf("couldn't open video file\n");
         return 1;
     }
 
     glfwMakeContextCurrent(window);
 
+    //generate texture
     GLuint tex_handle;
     glGenTextures(1, &tex_handle);
     glBindTexture(GL_TEXTURE_2D, tex_handle);
@@ -35,7 +34,18 @@ int main(int argc, char* argv[]) {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE); 
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, frame_width, frame_height, 0, GL_RGB, GL_UNSIGNED_BYTE, frame_data);
+
+    // Allocate Frame Buffer
+    const int frame_width = vr_state.width;
+    const int frame_height = vr_state.height;
+    uint8_t* frame_data = new uint8_t[frame_width * frame_height * 4];
+
+    if(!video_reader_read_frame(&vr_state, frame_data)){
+        printf("couldn't load video frame\n");
+        return 1;
+    }
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, frame_width, frame_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, frame_data);
 
     
     while(!glfwWindowShouldClose(window)){
@@ -46,8 +56,16 @@ int main(int argc, char* argv[]) {
         glfwGetFramebufferSize(window, &window_width, &window_height);
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        glOrtho(0, window_width, 0, window_height, -1 ,1); 
+        glOrtho(0, window_width, window_height, 0, -1 ,1); 
         glMatrixMode(GL_MODELVIEW);
+
+        //Read a new frame and load it into texture
+        if(!video_reader_read_frame(&vr_state, frame_data)){
+            printf("couldn't load video frame\n");
+            return 1;
+        }
+        glBindTexture(GL_TEXTURE_2D, tex_handle);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, frame_width, frame_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, frame_data);
 
         // Render the whatever you want
         glEnable(GL_TEXTURE_2D);
@@ -61,9 +79,10 @@ int main(int argc, char* argv[]) {
         glDisable(GL_TEXTURE_2D);
         
         glfwSwapBuffers(window);
-        glfwWaitEvents();
-    }
+        glfwPollEvents();   
 
+    }
+    video_reader_close(&vr_state);
 
     return 0;
 }

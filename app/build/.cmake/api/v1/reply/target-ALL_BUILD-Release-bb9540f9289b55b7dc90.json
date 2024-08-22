@@ -17,10 +17,10 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "app::@6890427a1f51a3e7e1df"
+			"id" : "glfw::@17f284a5fc0809a54549"
 		},
 		{
-			"id" : "glfw::@17f284a5fc0809a54549"
+			"id" : "app::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
