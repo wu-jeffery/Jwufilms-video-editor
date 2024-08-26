@@ -142,7 +142,7 @@ bool video_reader_read_frame(VideoReaderState* state, uint8_t* frame_buffer){
         av_packet_unref(av_packet); // Free the packet after processing
         break;
     }
-
+    
     // if (!frame_found) {
     //     printf("No key frame found\n");
     //     av_frame_free(&av_frame);
@@ -158,21 +158,21 @@ bool video_reader_read_frame(VideoReaderState* state, uint8_t* frame_buffer){
                                     av_codec_ctx->pix_fmt,
                                     width, height,
                                     AV_PIX_FMT_RGB0,
-                                    SWS_FAST_BILINEAR,
+                                    SWS_BILINEAR,
                                     NULL, 
                                     NULL,
                                     NULL 
                                     );
     }
-    
+   
+
     if(!sws_scaler_ctx){
         printf("couldn't init sw scaler \n");
         return false;
     }
-    
+   
     // Allocate the data for the frame
-    
-    uint8_t* dest[4] = {frame_buffer, NULL, NULL, NULL};
+    uint8_t* dest[4] = {frame_buffer, NULL, NULL, NULL}; 
     int dest_linesize[4] = {width * 4, 0, 0, 0};
     sws_scale(sws_scaler_ctx, av_frame->data, av_frame->linesize, 0, av_frame->height, dest, dest_linesize);
    
