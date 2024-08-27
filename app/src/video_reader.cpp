@@ -9,6 +9,7 @@ bool video_reader_open(VideoReaderState* state, const char* filename){
     auto& av_format_ctx = state->av_format_ctx;
     auto& av_codec_ctx = state->av_codec_ctx;
     auto& video_stream_index = state->video_stream_index;
+    auto& audio_stream_index = state->audio_stream_index;
     auto& av_frame = state->av_frame;
     auto& av_packet = state->av_packet;
     auto& sws_scaler_ctx = state->sws_scaler_ctx;
@@ -106,77 +107,103 @@ bool video_reader_read_frame(VideoReaderState* state, uint8_t* frame_buffer){
 
 
     // Decode One Frame
-    int response;
-    bool frame_found = false;
-    while (av_read_frame(av_format_ctx, av_packet) >= 0) {
-        if (av_packet->stream_index != video_stream_index) {
-            av_packet_unref(av_packet); // Free the packet before continuing
-            continue;
-        }
+    // int response;
+    // bool frame_found = false;
+    // while (av_read_frame(av_format_ctx, av_packet) >= 0) {
+    //     if (av_packet->stream_index != video_stream_index) {
+    //         av_packet_unref(av_packet); // Free the packet before continuing
+    //         continue;
+    //     }
 
-        response = avcodec_send_packet(av_codec_ctx, av_packet);
-        if (response < 0) {
-            printf("Failed to send packet to decoder\n");
-            av_packet_unref(av_packet); // Free the packet before returning
-            return false;
-        }
+    //     response = avcodec_send_packet(av_codec_ctx, av_packet);
+    //     if (response < 0) {
+    //         printf("Failed to send packet to decoder\n");
+    //         av_packet_unref(av_packet); // Free the packet before returning
+    //         return false;
+    //     }
 
-        response = avcodec_receive_frame(av_codec_ctx, av_frame);
-        if (response == AVERROR(EAGAIN) || response == AVERROR_EOF) {
-            av_packet_unref(av_packet); // Free the packet before continuing
-            continue;
-        } else if (response < 0) {
-            av_packet_unref(av_packet); // Free the packet before returning
-            printf("Failed to receive frame from decoder\n");
-            return false;
-        }
+    //     response = avcodec_receive_frame(av_codec_ctx, av_frame);
+    //     if (response == AVERROR(EAGAIN) || response == AVERROR_EOF) {
+    //         av_packet_unref(av_packet); // Free the packet before continuing
+    //         continue;
+    //     } else if (response < 0) {
+    //         av_packet_unref(av_packet); // Free the packet before returning
+    //         printf("Failed to receive frame from decoder\n");
+    //         return false;
+    //     }
 
-        // // Check if the frame is a key frame
-        // if (av_frame->key_frame) {
-        //     frame_found = true;
-        //     printf("Found key frame! Width: %d, Height: %d\n", av_frame->width, av_frame->height);
-        //     av_packet_unref(av_packet); // Free the packet after processing
-        //     break; // Exit loop after finding the first key frame
-        // }
+    //     // // Check if the frame is a key frame
+    //     // if (av_frame->key_frame) {
+    //     //     frame_found = true;
+    //     //     printf("Found key frame! Width: %d, Height: %d\n", av_frame->width, av_frame->height);
+    //     //     av_packet_unref(av_packet); // Free the packet after processing
+    //     //     break; // Exit loop after finding the first key frame
+    //     // }
 
-        av_packet_unref(av_packet); // Free the packet after processing
-        break;
-    }
+    //     av_packet_unref(av_packet); // Free the packet after processing
+    //     break;
+    // }
     
-    // if (!frame_found) {
-    //     printf("No key frame found\n");
-    //     av_frame_free(&av_frame);
-    //     av_packet_free(&av_packet);
-    //     avcodec_free_context(&av_codec_ctx);
-    //     avformat_close_input(&av_format_ctx);
-    //     avformat_free_context(av_format_ctx);
+    // // if (!frame_found) {
+    // //     printf("No key frame found\n");
+    // //     av_frame_free(&av_frame);
+    // //     av_packet_free(&av_packet);
+    // //     avcodec_free_context(&av_codec_ctx);
+    // //     avformat_close_input(&av_format_ctx);
+    // //     avformat_free_context(av_format_ctx);
+    // //     return false;
+    // // }
+
+    // if(!sws_scaler_ctx){
+    //     sws_scaler_ctx = sws_getContext(width, height,
+    //                                 av_codec_ctx->pix_fmt,
+    //                                 width, height,
+    //                                 AV_PIX_FMT_RGB0,
+    //                                 SWS_BILINEAR,
+    //                                 NULL, 
+    //                                 NULL,
+    //                                 NULL 
+    //                                 );
+    // }
+   
+
+    // if(!sws_scaler_ctx){
+    //     printf("couldn't init sw scaler \n");
     //     return false;
     // }
-
-    if(!sws_scaler_ctx){
-        sws_scaler_ctx = sws_getContext(width, height,
-                                    av_codec_ctx->pix_fmt,
-                                    width, height,
-                                    AV_PIX_FMT_RGB0,
-                                    SWS_BILINEAR,
-                                    NULL, 
-                                    NULL,
-                                    NULL 
-                                    );
+   
+    // // Allocate the data for the frame
+    // uint8_t* dest[4] = {frame_buffer, NULL, NULL, NULL}; 
+    // int dest_linesize[4] = {width * 4, 0, 0, 0};
+    // sws_scale(sws_scaler_ctx, av_frame->data, av_frame->linesize, 0, av_frame->height, dest, dest_linesize);
+   
+    // return true;
+    int response;
+    while (av_read_frame(state->av_format_ctx, state->av_packet) >= 0) {
+        if (state->av_packet->stream_index == state->video_stream_index) {
+            response = avcodec_send_packet(state->av_codec_ctx, state->av_packet);
+            if (response >= 0) {
+                response = avcodec_receive_frame(state->av_codec_ctx, state->av_frame);
+                if (response == 0) {
+                    sws_scaler_ctx = sws_getContext(
+                        state->width, state->height, state->av_codec_ctx->pix_fmt,
+                        state->width, state->height, AV_PIX_FMT_RGB0,
+                        SWS_BILINEAR, NULL, NULL, NULL);
+                    if (!sws_scaler_ctx) {
+                        printf("Couldn't init sw scaler\n");
+                        return false;
+                    }
+                    uint8_t* dest[4] = {frame_buffer, NULL, NULL, NULL};
+                    int dest_linesize[4] = {state->width * 4, 0, 0, 0};
+                    sws_scale(sws_scaler_ctx, state->av_frame->data, state->av_frame->linesize, 0, state->av_frame->height, dest, dest_linesize);
+                    av_packet_unref(state->av_packet);
+                    return true;
+                }
+            }
+        }
+        av_packet_unref(state->av_packet);
     }
-   
-
-    if(!sws_scaler_ctx){
-        printf("couldn't init sw scaler \n");
-        return false;
-    }
-   
-    // Allocate the data for the frame
-    uint8_t* dest[4] = {frame_buffer, NULL, NULL, NULL}; 
-    int dest_linesize[4] = {width * 4, 0, 0, 0};
-    sws_scale(sws_scaler_ctx, av_frame->data, av_frame->linesize, 0, av_frame->height, dest, dest_linesize);
-   
-    return true;
+    return false;
 }
 void video_reader_close(VideoReaderState* state){
     sws_freeContext(state->sws_scaler_ctx);

@@ -15,6 +15,15 @@ set(AVUTIL_LIBRARY "C:/ffmpeg_prebuild/lib/avutil.lib")
 set(SWSCALE_LIBRARY "C:/ffmpeg_prebuild/lib/swscale.lib")
 set(SWRESAMPLE_LIBRARY "C:/ffmpeg_prebuild/lib/swresample.lib")
 
+# Find SDL2
+set(SDL2_DIR "C:/SDL2")
+set(SDL2_INCLUDE_DIR "${SDL2_DIR}/include")
+set(SDL2_LIBRARY "${SDL2_DIR}/lib/x64/SDL2.lib")
+set(SDL2_MAIN_LIBRARY "${SDL2_DIR}/lib/x64/SDL2main.lib") # Link against SDL2main
+
+# Include SDL2 directories
+include_directories(${SDL2_INCLUDE_DIR})
+
 # Platform-specific library settings
 if(APPLE)
     list(APPEND EXTRA_LIBS
@@ -52,5 +61,7 @@ target_link_libraries(app
     ${AVUTIL_LIBRARY}
     ${SWSCALE_LIBRARY}
     ${SWRESAMPLE_LIBRARY}
+    ${SDL2_LIBRARY}
+    ${SDL2_MAIN_LIBRARY}
     ${EXTRA_LIBS}
 )

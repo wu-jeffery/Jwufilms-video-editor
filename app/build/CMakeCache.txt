@@ -358,6 +358,9 @@ Qt6ZlibPrivate_DIR:PATH=C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6ZlibPrivate
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=C:/Qt/6.7.2/msvc2019_64/lib/cmake/Qt6
 
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
+
 //Path to a library.
 SWRESAMPLE_LIBRARY:FILEPATH=C:/ffmpeg_prebuild/lib/swresample.lib
 

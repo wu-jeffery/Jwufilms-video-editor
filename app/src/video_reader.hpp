@@ -16,6 +16,7 @@ struct VideoReaderState {
     AVFormatContext* av_format_ctx;
     AVCodecContext* av_codec_ctx;
     int video_stream_index; 
+    int audio_stream_index;
     AVFrame* av_frame;
     AVPacket* av_packet;
     SwsContext* sws_scaler_ctx;
