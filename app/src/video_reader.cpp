@@ -28,6 +28,7 @@ bool video_reader_open(VideoReaderState* state, const char* filename){
 
     // Find the first valid video stream
     video_stream_index = -1;
+    audio_stream_index = -1;
     AVCodecParameters* av_codec_params = nullptr;
     const AVCodec* av_codec = nullptr;
     
@@ -38,16 +39,28 @@ bool video_reader_open(VideoReaderState* state, const char* filename){
         if (!av_codec) {
             continue;
         }
-        if (av_codec_params->codec_type == AVMEDIA_TYPE_VIDEO) {
+        if (av_codec_params->codec_type == AVMEDIA_TYPE_VIDEO && video_stream_index == -1) {
             video_stream_index = i;
-            width = av_codec_params->width;
-            height = av_codec_params->height;
+            state->width = av_codec_params->width;
+            state->height = av_codec_params->height;
+            state->video_codec_params = av_codec_params; // Store codec params for later
+            state->video_codec = av_codec; // Store codec for later
+        } else if (av_codec_params->codec_type == AVMEDIA_TYPE_AUDIO && audio_stream_index == -1) {
+            audio_stream_index = i;
+            state->audio_codec_params = av_codec_params; // Store codec params for later
+            state->audio_codec = av_codec; // Store codec for later
+        }
+        if (video_stream_index != -1 && audio_stream_index != -1) {
             break;
         }
     }
 
     if (video_stream_index == -1) {
         printf("Couldn't find a valid video stream inside the file\n");
+        return false;
+    }
+    if (audio_stream_index == -1) {
+        printf("Couldn't find a valid audio stream inside the file\n");
         return false;
     }
 
@@ -65,6 +78,28 @@ bool video_reader_open(VideoReaderState* state, const char* filename){
 
     if (avcodec_open2(av_codec_ctx, av_codec, NULL) < 0) {
         printf("Couldn't open codec\n");
+        return false;
+    }
+
+    // Set up a codec context for the audio decoder
+    if (state->audio_codec && state->audio_codec_params) {
+        state->av_audio_codec_ctx = avcodec_alloc_context3(state->audio_codec);
+        if (!state->av_audio_codec_ctx) {
+            printf("Couldn't create AVCodecContext for audio\n");
+            return false;
+        }
+
+        if (avcodec_parameters_to_context(state->av_audio_codec_ctx, state->audio_codec_params) < 0) {
+            printf("Couldn't initialize AVCodecContext for audio\n");
+            return false;
+        }
+
+        if (avcodec_open2(state->av_audio_codec_ctx, state->audio_codec, NULL) < 0) {
+            printf("Couldn't open audio codec\n");
+            return false;
+        }
+    } else {
+        printf("Audio codec or parameters not set\n");
         return false;
     }
 
@@ -205,11 +240,12 @@ bool video_reader_read_frame(VideoReaderState* state, uint8_t* frame_buffer){
     }
     return false;
 }
-void video_reader_close(VideoReaderState* state){
+void video_reader_close(VideoReaderState* state) {
     sws_freeContext(state->sws_scaler_ctx);
     av_frame_free(&state->av_frame);
     av_packet_free(&state->av_packet);
     avcodec_free_context(&state->av_codec_ctx);
+    avcodec_free_context(&state->av_audio_codec_ctx); // Clean up audio codec context
     avformat_close_input(&state->av_format_ctx);
     avformat_free_context(state->av_format_ctx);
 }

@@ -15,6 +15,11 @@ struct VideoReaderState {
     // Private internal state
     AVFormatContext* av_format_ctx;
     AVCodecContext* av_codec_ctx;
+    AVCodecContext* av_audio_codec_ctx;
+    AVCodecParameters* video_codec_params;
+    AVCodecParameters* audio_codec_params;
+    const AVCodec* video_codec = nullptr; // Store video codec
+    const AVCodec* audio_codec = nullptr; // Store audio codec
     int video_stream_index; 
     int audio_stream_index;
     AVFrame* av_frame;
