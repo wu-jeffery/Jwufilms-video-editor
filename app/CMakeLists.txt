@@ -52,7 +52,6 @@ add_executable(app
                 src/video_reader.cpp
                 src/video_reader.hpp
                 )
-
 # Link FFmpeg libraries explicitly
 target_link_libraries(app
     glfw

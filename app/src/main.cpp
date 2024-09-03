@@ -110,41 +110,6 @@ int main(int argc, char* argv[]) {
         }
         glfwPollEvents();
     }
-    // while(!glfwWindowShouldClose(window)){
-    //     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    //     // Set up orphagraphic projection
-    //     int window_width, window_height;
-    //     glfwGetFramebufferSize(window, &window_width, &window_height);
-    //     glMatrixMode(GL_PROJECTION);
-    //     glLoadIdentity();
-    //     glOrtho(0, window_width, window_height, 0, -1 ,1); 
-    //     glMatrixMode(GL_MODELVIEW);
-
-    //     //Read a new frame and load it into texture
-    //     if(!video_reader_read_frame(&vr_state, frame_data)){
-    //         printf("couldn't load video frame\n");
-    //         return 1;
-    //     }
-
-    //     glBindTexture(GL_TEXTURE_2D, tex_handle);
-    //     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, frame_width, frame_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, frame_data);
-
-    //     // Render the whatever you want
-    //     glEnable(GL_TEXTURE_2D);
-    //     glBindTexture(GL_TEXTURE_2D, tex_handle);
-    //     glBegin(GL_QUADS);
-    //         glTexCoord2d(0,0); glVertex2i(0, 0);
-    //         glTexCoord2d(1,0); glVertex2i(frame_width, 0);
-    //         glTexCoord2d(1,1); glVertex2i(frame_width, frame_height);
-    //         glTexCoord2d(0,1); glVertex2i(0, frame_height);
-    //     glEnd();
-    //     glDisable(GL_TEXTURE_2D);
-        
-    //     glfwSwapBuffers(window);
-    //     glfwPollEvents();   
-
-    // }
     video_reader_close(&vr_state);
     delete[] frame_data;
     return 0;
